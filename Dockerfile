@@ -1,18 +1,16 @@
-FROM debian:buster
+FROM python:3.7-slim-buster
 
-LABEL "com.github.actions.name"="LaTeX linter (chktex)"
+LABEL "com.github.actions.name"="LaTeX linter"
 LABEL "com.github.actions.description"="Detect stylistic errors in a LaTeX document"
 LABEL "com.github.actions.icon"="edit"
 LABEL "com.github.actions.color"="yellow"
 
-LABEL "repository"="http://github.com/j2kun/chktex-action"
-LABEL "homepage"="http://github.com/j2kun"
-LABEL "maintainer"="Jeremy Kun <j2kun@users.noreply.github.com>"
+MAINTAINER ColinWang
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install --no-install-recommends -y \
   chktex \
-  python3.7 \
-  python3-pip
+  && apt-get clean \
+  && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /tmp/action
 COPY requirements.txt ./
