@@ -1,6 +1,6 @@
-name: LaTeX linter (chktex)
-author: Jeremy Kun
-description: Lint your LaTeX files with chktex
+name: LaTeX linter
+author: Colin Wang
+description: Lint your LaTeX files with chktex, without docker build everytime
 runs:
   using: 'docker'
   image: 'ghcr.io/colinaaa/chktex'
