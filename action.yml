@@ -3,7 +3,7 @@ author: Jeremy Kun
 description: Lint your LaTeX files with chktex
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'ghcr.io/colinaaa/chktex'
 branding:
   icon: 'edit'
   color: 'yellow'
