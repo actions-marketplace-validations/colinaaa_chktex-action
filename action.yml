@@ -3,7 +3,7 @@ author: Colin Wang
 description: Lint your LaTeX files with chktex, without docker build everytime
 runs:
   using: 'docker'
-  image: 'ghcr.io/colinaaa/chktex'
+  image: 'docker://ghcr.io/colinaaa/chktex:latest'
 branding:
   icon: 'edit'
   color: 'yellow'
