@@ -18,4 +18,5 @@ WipeArg
 # Use this to ignore linter errors of a specific error code.
 # For example, code 24 warns when an index may be misplaced due
 # to spaces (page spillover).
-CmdLine { -n 24 }
+# code 9 and 17 warns [] and () not match
+CmdLine { -n 9 -n 17 -n 24 }
